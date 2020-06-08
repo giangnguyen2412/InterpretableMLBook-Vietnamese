@@ -1,0 +1,23 @@
+---
+title: "Interpretable Machine Learning"
+subtitle: "A Guide for Making Black Box Models Explainable."
+author: "Christoph Molnar"
+date: "`r Sys.Date()`"
+knit: "bookdown::render_book"
+documentclass: krantz
+link-citations: yes
+colorlinks: yes
+lot: no
+lof: no
+fontsize: 12pt
+monofont: "Source Code Pro"
+monofontoptions: "Scale=0.7"
+site: bookdown::bookdown_site
+description: "Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable."
+#url:
+github-repo: christophM/interpretable-ml-book
+always_allow_html: yes
+---
+
+```{r child = '00.0-preface.Rmd'}
+```

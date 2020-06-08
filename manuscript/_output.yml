@@ -1,0 +1,18 @@
+bookdown::gitbook:
+  dev: svglite
+  split_by: section
+  css: css/style.css
+  includes:
+    in_header: html/header.html
+  config:
+    edit: https://github.com/christophM/interpretable-ml-book/edit/master/%s
+    sharing:
+      github: yes
+      facebook: yes
+    toc:
+      collapse: subsection
+      before: |
+        <li><a href="./">Interpretable machine learning</a></li>
+      after: |
+        <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
