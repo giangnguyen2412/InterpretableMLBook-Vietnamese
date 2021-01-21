@@ -1,40 +1,42 @@
+\usepackage{import}
+\begin{document}
 
-\chapter{Các bộ dữ liệu}
+\chapter*{Chapter 3: Các bộ dữ liệu}
+
+Xuyên suốt cuốn sách này, tất cả cách mô hình và phương pháp được áp dụng cho các bộ dữ liệu thực tế đều có sẵn trên mạng. Ta sẽ dùng các tập dữ liệu khác nhau cho các tác vụ khác nhau: Phân loại, hồi quy, và phân loại văn bản.
+
 \section{Thuê xe đạp (Hồi quy)}\label{chap_3.1}
-Tập dữ liệu sau thống kê số lượng xe đạp được thuê mỗi ngày từ công ty thuê xe đạp Capital-Bikeshare ở Washington D.C, Mỹ, cùng với thông tin thời tiết và các mùa. Dữ liệu đã được mở tự do tham khảo từ Capital-Bikeshare. Nhóm tác giả Fanaee-T and Gama (2013) sau đó đã thêm thông tin thời tiết và mùa tương ứng. Mục tiêu cho bộ dữ liệu này là dự đoán có bao nhiêu chiếc xe được thuê dựa trên thông tin 
-cho trước về thời tiết và mùa. Bộ dữ liệu có thể truy cập tải miễn phí ở \href{http://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset}{UCI Machine Learning Repository}. 
+Tập dữ liệu sau thống kê số lượng xe đạp được thuê mỗi ngày từ công ty thuê xe đạp Capital-Bikeshare ở Washington D.C, Mỹ, cùng với thông tin thời tiết và các mùa. Dữ liệu đã được cấp phép sử dụng tự do bởi Capital-Bikeshare. Nhóm tác giả Fanaee-T and Gama (2013) sau đó đã thêm thông tin thời tiết và mùa tương ứng. Mục tiêu cho bộ dữ liệu này là dự đoán có bao nhiêu chiếc xe được thuê dựa trên thông tin cho trước về thời tiết và mùa. Bộ dữ liệu có thể truy cập tải miễn phí tại đây: \href{http://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset}{UCI Machine Learning Repository}. 
 
-Các đặc trưng (features) mới đã được thêm vào bộ dữ liệu nêu trên và không phải tất cả các đặc trưng có sẵn sẽ được thêm trong các ví dụ trong sách. Danh sách các đặc trưng được dùng là:
+Các đặc trưng (features) mới đã được thêm vào bộ dữ liệu nêu trên và không phải tất cả các đặc trưng có sẵn sẽ được dùng trong các ví dụ trong sách này. Danh sách các đặc trưng được dùng là:
 \begin{itemize}
-    \item Số lượng xe đạp của cả khác hàng thông thường (casual) và đã đăng kí trước (registered). Só lượng này sẽ là đầu ra của mô hình hồi quy. 
+    \item Số lượng xe đạp được thuê bởi cả khách hàng thông thường (casual) và thành viên (registered). Số lượng này sẽ là đầu ra của mô hình hồi quy. 
     \item Thông tin về mùa, xuân, hạ, thu, hoặc đông.
-    \item Ngày nghĩ lễ hoặc không nghĩ lễ. 
-    \item Chỉ số năm 2011 hoặc 2012.
+    \item Ngày nghỉ lễ hoặc không nghỉ lễ. 
+    \item Năm 2011 hoặc 2012.
     \item Số lượng ngày tính từ 1/1/2011 (ngày đầu tiên trong bộ dữ liệu). Đặc trưng này được cân nhắc để theo dõi xu hướng dữ liệu theo thời gian.
     \item Ngày làm việc hay cuối tuần. 
     \item Tình hình thời tiết ngày đó, ví dụ:
     \begin{itemize}
         \item Trời quang (clear), ít mây (few clouds), hơi mây (partly cloudy), hoặc nhiều mây (cloudy).
         \item Sương (mist), sương + mây, sương + mây vụn (broken clouds), sương + ít mây.
-        \item Tuyết nhẹ, mưa nhẹ + dông (thunderstorm) + mây rải rác (scattered clouds), mưa nhẹ + mây rải rác.
-        \item Mưa nặng (heavy rain) + mưa tuyết nhẹ (ice pellets) + dông + sương, tuyết + sương.
+        \item Tuyết nhẹ, mưa nhẹ + giông (thunderstorm) + mây rải rác (scattered clouds), mưa nhẹ + mây rải rác.
+        \item Mưa nặng (heavy rain) + mưa tuyết nhẹ (ice pellets) + giông + sương, tuyết + sương.
     \end{itemize}
-    \item Nhiệt độ theo Celsius.
+    \item Nhiệt độ theo độ Celsius.
     \item Độ ẩm tương đối theo phần trăm (0\% -  100\%).
     \item Tốc độ gió theo km/giờ.
 \end{itemize}
-Bộ dữ liệu trong sách đã được xử lý tương đối (slightly processing). Bạn đọc có thể tìm R-script trong \href{https://github.com/christophM/interpretable-ml-book/blob/master/R/get-bike-sharing-dataset.R}{trang chứa Github} cùng với thư mục \href{https://github.com/christophM/interpretable-ml-book/blob/master/data/bike.RData}{final RData file}.
-
-\clearpage
+Bộ dữ liệu trong sách đã được xử lý tương đối (slightly processing). Bạn đọc có thể tìm mã R trong \href{https://github.com/christophM/interpretable-ml-book/blob/master/R/get-bike-sharing-dataset.R}{trang Github} cùng với tệp \href{https://github.com/christophM/interpretable-ml-book/blob/master/data/bike.RData}{final RData file}.
 
 \section{Bình luận rác trên Youtube (Phân loại văn bản)}
-Để làm một ví dụ cho bài toán phân loại văn bản, chúng tôi làm việc với 1956 bình luận đến từ 5 video Youtube khác nhau. May thay, nhóm tác giả sử dụng bộ dữ liệu này trong một bài viết về phân loại các bình luận rác đã cung chúng miễn phí (Alberto, Lochter, và Almeida (2015)).
+Dữ liệu được dùng là tập dữ liệu về phân loại bình luận rác (Alberto, Lochter, và Almeida (2015)).
 
-Các bình luận này được thu thập thông qua Youtube API từ năm trong số mười video được xem nhiều nhất trên YouTube vào nửa đầu năm 2015. Cả 5 đều là video âm nhạc. Một trong số đó là "Gangnam Style" của nghệ sĩ Hàn Quốc Psy. Các nghệ sĩ khác là Katy Perry, LMFAO, Eminem và Shakira.
+Các bình luận này được thu thập thông qua Youtube API từ 5 trong số 10 video được xem nhiều nhất trên YouTube vào nửa đầu năm 2015. Cả 5 đều là video âm nhạc. Một trong số đó là ''Gangnam Style`` của PSY. Các nghệ sĩ khác là Katy Perry, LMFAO, Eminem và Shakira.
 
-Xem qua một số bình luận, các bình luận được dán nhãn thủ công là "rác" hoặc "có ý nghĩa". Bình luận "rác" được mã hóa bằng "1" và "có ý nghĩa" bằng "0".
+Nhìn qua một số bình luận, ta thấy các bình luận được gắn nhãn thủ công là ''rác`` hoặc ''có ý nghĩa". Bình luận ''rác`` được mã hóa bằng ''1`` và ''có ý nghĩa`` bằng ''0".
 
-\begin{table}[h!]
+\begin{table}[]
 \caption{}
 \label{tab:my-table}
 \begin{tabular}{|l|l|}
@@ -55,14 +57,9 @@ and u should.d check my channel and tell me what I should \\ do next!  & 1     \
 
 Bạn cũng có thể truy cập YouTube và xem phần bình luận. Nhưng làm ơn đừng bị cuốn vào địa ngục YouTube và cuối cùng xem video những con khỉ ăn cắp và uống cocktail từ khách du lịch trên bãi biển. Trình phát hiện bình luận rác Google Spam có lẽ cũng đã thay đổi rất nhiều kể từ năm 2015.
 
-\href{https://www.youtube.com/watch?v=9bZkp7q19f0&feature=player_embedded}{Xem qua video phá vỡ kỷ lục số lượt xem "Gangnam Style" tại đây.}
+\href{https://www.youtube.com/watch?v=9bZkp7q19f0&feature=player_embedded}{Xem qua video phá vỡ kỷ lục số lượt xem ''Gangnam Style`` tại đây.}
 
-Nếu bạn muốn thao tác dữ liệu, bạn có thể tìm thấy file \href{https://github.com/christophM/interpretable-ml-book/blob/master/data/ycomments.RData}{RData} cùng với tập lệnh \href{https://github.com/christophM/interpretable-ml-book/blob/master/R/get-SpamTube-dataset.R}{R} với một số chức năng tiện lợi trong kho lưu trữ Github của cuốn sách.
-
-
-
-
-\clearpage 
+Nếu bạn muốn thao tác với dữ liệu, bạn có thể dùng file \href{https://github.com/christophM/interpretable-ml-book/blob/master/data/ycomments.RData}{RData} cùng với tập lệnh \href{https://github.com/christophM/interpretable-ml-book/blob/master/R/get-SpamTube-dataset.R}{R} với một số hàm tiện lợi trong Github của cuốn sách.
 
 \section{Các nguy cơ gây ung thư cổ tử cung (Phân loại)} \label{chap_3.3}
 Bộ dữ liệu ung thư cổ tử cung bao gồm các chỉ số và nguy cơ để dự đoán liệu một người phụ nữ sẽ bị ung thư cổ tử cung hay không. Các tính năng bao gồm thống kê dân số (như tuổi), lối sống, và lịch sử y tế. Dữ liệu có thể được tải xuống từ kho lưu trữ của \href{https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+\%28Risk+Factors\%29}{UCI Machine Learning} và được mô tả bởi Fernandes, Cardoso và Fernandes (2017).
@@ -73,19 +70,20 @@ Một số đặc trưng (features) được sử dụng trong các ví dụ c�
     \item Số lượng bạn tình
     \item Tuổi lần đầu quan hệ tình dục
     \item Số lần mang thai
-    \item Có dùng thuốc lá hay không
+    \item Có dùng thuốc lá hay không?
     \item Số năm đã dùng thuốc lá
-    \item Có dùng thuốc tránh thai ảnh hưởng nội tiết tốt
-    \item Số năm đã dùng thuốc tránh thai ảnh hưởng nội tiết tốt
-    \item Có dùng vòng tránh thai hay không
+    \item Có dùng thuốc tránh thai ảnh hưởng nội tiết tố?
+    \item Số năm đã dùng thuốc tránh thai ảnh hưởng nội tiết tố
+    \item Có dùng vòng tránh thai hay không?
     \item Số năm đã dùng vòng tránh thai
-    \item Bệnh nhân có từng mắc bệnh lây qua đường tình dục hay không (STD)
+    \item Bệnh nhân có từng mắc bệnh lây qua đường tình dục hay không?
     \item Số lượng bệnh truyền nhiễm qua đường tình dục đã được chẩn đoán
     \item Thời gian kể từ khi chẩn đoán bệnh (STD) đầu tiên
     \item Thời gian kể từ lần chẩn đoán bệnh (STD) cuối cùng
-    \item Kết quả sinh thiết "khoẻ mạnh" hay "ung thư" (mục tiêu kết quả)
+    \item Kết quả sinh thiết ''khoẻ mạnh`` hay ''ung thư`` (mục tiêu/kết quả)
 \end{itemize}
 
-Kết quả sinh thiết đóng vai trò là tiêu chuẩn vàng để chẩn đoán ung thư cổ tử cung. Đối với các ví dụ trong cuốn sách này, kết quả sinh thiết đã được sử dụng làm mục tiêu. Các giá trị bị thiếu cho mỗi cột được thay thế bởi giá trị xuất hiện nhiều nhất, đây là một giải pháp tồi, vì câu trả lời đúng có thể tương quan với xác suất thiếu giá trị. Rất có thể sẽ có sự thiên vị bởi vì các câu hỏi mang tính riêng tư rất cao. Nhưng đây không phải là một cuốn sách về việc xử lí thiếu dữ liệu, nên giải pháp  này được tạm chấp nhận.
+Kết quả sinh thiết đóng vai trò như là tiêu chuẩn vàng để chẩn đoán ung thư cổ tử cung. Đối với các ví dụ trong cuốn sách này, kết quả sinh thiết đã được sử dụng làm nhãn. Các giá trị bị thiếu trong mỗi cột được thay thế bởi giá trị xuất hiện nhiều nhất, đây là một giải pháp chưa tốt, vì giá trị có thể tương quan với xác suất mà giá trị bị thiếu. Rất có thể sẽ co sai lệch bởi vì các câu hỏi mang tính riêng tư rất cao. Nhưng đây không phải là một cuốn sách về việc xử lí việc thiếu dữ liệu, nên giải phá  này được tạm chấp nhận.
 
-Để mô phỏng lại các ví dụ của cuốn sách với bộ dữ liệu này, hãy tìm tập lệnh \href{https://github.com/christophM/interpretable-ml-book/blob/master/R/get-cervical-cancer-dataset.R}{R tiền xử lý (preprocessing R-script)}  và tệp \href{https://github.com/christophM/interpretable-ml-book/blob/master/data/cervical.RData}{final RData} trong kho lưu trữ Github của cuốn sách.
+Để mô phỏng lại các ví dụ của cuốn sách với bộ dữ liệu này, hãy tìm tập lệnh \href{https://github.com/christophM/interpretable-ml-book/blob/master/R/get-cervical-cancer-dataset.R}{R tiền xử lý (preprocessing R-script)}  và tệp \href{https://github.com/christophM/interpretable-ml-book/blob/master/data/cervical.RData}{final RData} trong Github của cuốn sách.
+\end{document}
