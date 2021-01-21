@@ -1,7 +1,4 @@
-\usepackage{import}
-\begin{document}
-
-\chapter*{Chapter 3: Các bộ dữ liệu}
+\chapter*{Chương3: Các bộ dữ liệu}
 
 Xuyên suốt cuốn sách này, tất cả cách mô hình và phương pháp được áp dụng cho các bộ dữ liệu thực tế đều có sẵn trên mạng. Ta sẽ dùng các tập dữ liệu khác nhau cho các tác vụ khác nhau: Phân loại, hồi quy, và phân loại văn bản.
 
@@ -37,21 +34,22 @@ Các bình luận này được thu thập thông qua Youtube API từ 5 trong s
 Nhìn qua một số bình luận, ta thấy các bình luận được gắn nhãn thủ công là ''rác`` hoặc ''có ý nghĩa". Bình luận ''rác`` được mã hóa bằng ''1`` và ''có ý nghĩa`` bằng ''0".
 
 \begin{table}[]
+\centering
 \caption{}
 \label{tab:my-table}
 \begin{tabular}{|l|l|}
 \hline
-CONTENT  & CLASS \\ \hline
-Huh, anyway check out this you{[}tube{]} channel: kobyoshi02 & 1 \\ \hline
-Hey guys check out my new channel and our first vid \\ THIS IS US THE MONKEYS!!! I'm the monkey in the white \\   shirt, please leave a like comment and please subscribe!!!! & 1 \\ \hline
-just for test I have to say murdev.com  & 1     \\ \hline
-me shaking my sexy ass on my channel enjoy \textasciicircum{}\_\textasciicircum{}  & 1     \\ \hline
-watch?v=vtaRGgvGtWQ Check this out . & 1 \\ \hline
-Hey, check out my new website!! This site is about kids \\  stuff. kidsmediausa . com   & 1     \\ \hline
-Subscribe to my channel & 1     \\ \hline
-i turned it on mute as soon is i came \\ on i just wanted to check the views... & 0     \\ \hline
-You should check my channel for Funny VIDEOS!!  & 1     \\ \hline
-and u should.d check my channel and tell me what I should \\ do next!  & 1     \\ \hline
+CONTENT                                                                                                                                                                                                            & CLASS \\ \hline
+Huh, anyway check out this you{[}tube{]} channel: kobyoshi02                                                                                                                                                       & 1     \\ \hline
+\begin{tabular}[c]{@{}l@{}}Hey guys check out my new channel and our first vid \\ THIS IS US THE MONKEYS!!! I'm the monkey in the white shirt,\\ please leave a like comment and please subscribe!!!!\end{tabular} & 1     \\ \hline
+just for test I have to say murdev.com                                                                                                                                                                             & 1     \\ \hline
+me shaking my sexy ass on my channel enjoy \textasciicircum{}\_\textasciicircum{}                                                                                                                                  & 1     \\ \hline
+watch?v=vtaRGgvGtWQ Check this out .                                                                                                                                                                               & 1     \\ \hline
+\begin{tabular}[c]{@{}l@{}}Hey, check out my new website!! This site is about kids \\ stuff. kidsmediausa . com\end{tabular}                                                                                       & 1     \\ \hline
+Subscribe to my channel                                                                                                                                                                                            & 1     \\ \hline
+i turned it on mute as soon is i came on i just wanted to check the views...                                                                                                                                       & 0     \\ \hline
+You should check my channel for Funny VIDEOS!!                                                                                                                                                                     & 1     \\ \hline
+and u should.d check my channel and tell me what I should do next!                                                                                                                                                 & 1     \\ \hline
 \end{tabular}
 \end{table}
 
@@ -86,4 +84,3 @@ Một số đặc trưng (features) được sử dụng trong các ví dụ c�
 Kết quả sinh thiết đóng vai trò như là tiêu chuẩn vàng để chẩn đoán ung thư cổ tử cung. Đối với các ví dụ trong cuốn sách này, kết quả sinh thiết đã được sử dụng làm nhãn. Các giá trị bị thiếu trong mỗi cột được thay thế bởi giá trị xuất hiện nhiều nhất, đây là một giải pháp chưa tốt, vì giá trị có thể tương quan với xác suất mà giá trị bị thiếu. Rất có thể sẽ co sai lệch bởi vì các câu hỏi mang tính riêng tư rất cao. Nhưng đây không phải là một cuốn sách về việc xử lí việc thiếu dữ liệu, nên giải phá  này được tạm chấp nhận.
 
 Để mô phỏng lại các ví dụ của cuốn sách với bộ dữ liệu này, hãy tìm tập lệnh \href{https://github.com/christophM/interpretable-ml-book/blob/master/R/get-cervical-cancer-dataset.R}{R tiền xử lý (preprocessing R-script)}  và tệp \href{https://github.com/christophM/interpretable-ml-book/blob/master/data/cervical.RData}{final RData} trong Github của cuốn sách.
-\end{document}
