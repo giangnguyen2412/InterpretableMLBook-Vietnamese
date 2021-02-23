@@ -1,8 +1,6 @@
 [comment]: <> (Credit to https://d2l.aivivn.com/glossary.html)
 # Bảng thuật ngữ
 
-Các thuật ngữ cần được dịch theo chuẩn trong tập tin này.
-
 [A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g)
 [H](#h) [I](#i) [J](#j) [K](#k) [L](#l) [M](#m) [N](#n)
 [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u)
