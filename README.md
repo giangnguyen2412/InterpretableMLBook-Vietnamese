@@ -9,7 +9,7 @@ Bản gốc của tài liệu: https://christophm.github.io/interpretable-ml-boo
 
 Dịch giả:
 
-1. [Giang Nguyen](nguyengiangbkhn@gmail.com) - KAIST, S. Korea
+1. [Giang Nguyen](https://giangnguyen2412.github.io/) - KAIST, S. Korea
 2. [Duy-Tung Nguyen](tungnguyen211098@gmail.com) - University of Missouri, US
 3. [Hung-Quang Nguyen](hungquangnguyen66@gmail.com) - UET VNU, VN
 4. [Tri Le](ledinhtri.cse.hcmut@gmail.com)
